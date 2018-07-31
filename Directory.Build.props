@@ -1,0 +1,18 @@
+<Project>
+  <PropertyGroup>
+    <SimVer>0.0.0</SimVer>
+    <Authors>Todd Skelton</Authors>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release' OR '$(Configuration)'=='Debug'">true</GeneratePackageOnBuild>
+    <Version Condition="'$(Configuration)'=='Release'">$(SimVer)</Version>
+    <Version Condition="'$(Configuration)'=='Debug'">$(SimVer)-dev-201807251302</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!--<Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec" Condition="'$(TargetFramework)'=='netstandard2.0' AND ('$(Configuration)'=='NugetRelease' OR '$(Configuration)'=='NugetBeta')">
+    <Exec Command="C:\Nuget\NuGet.exe add $(ProjectDir)bin\$(Configuration)\$(AssemblyName).$(Version).nupkg -source \\mpmfileserver01\Q\Nuget\packages"></Exec>
+  </Target>-->
+</Project>

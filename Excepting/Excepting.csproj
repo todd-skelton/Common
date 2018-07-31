@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Kloc.Common.Excepting</AssemblyName>
+    <RootNamespace>Kloc.Common.Excepting</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Excepting.Abstractions\Excepting.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
