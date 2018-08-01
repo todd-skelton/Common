@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepting", "Excepting\Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepting.Abstractions", "Excepting.Abstractions\Excepting.Abstractions.csproj", "{5A7B9832-1398-4510-861C-41C5E6E7F5A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.EntityFrameworkCore", "Data.EntityFrameworkCore\Data.EntityFrameworkCore.csproj", "{C127DEDB-33E7-4728-B6A9-A447B36C6FA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{5A7B9832-1398-4510-861C-41C5E6E7F5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A7B9832-1398-4510-861C-41C5E6E7F5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A7B9832-1398-4510-861C-41C5E6E7F5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C127DEDB-33E7-4728-B6A9-A447B36C6FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C127DEDB-33E7-4728-B6A9-A447B36C6FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C127DEDB-33E7-4728-B6A9-A447B36C6FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C127DEDB-33E7-4728-B6A9-A447B36C6FA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

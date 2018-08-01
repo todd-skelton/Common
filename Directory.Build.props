@@ -2,6 +2,7 @@
   <PropertyGroup>
     <SimVer>0.0.0</SimVer>
     <Authors>Todd Skelton</Authors>
+    <Company>Kloc Limited Company</Company>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release' OR '$(Configuration)'=='Debug'">true</GeneratePackageOnBuild>
     <Version Condition="'$(Configuration)'=='Release'">$(SimVer)</Version>
     <Version Condition="'$(Configuration)'=='Debug'">$(SimVer)-dev-201807251302</Version>
