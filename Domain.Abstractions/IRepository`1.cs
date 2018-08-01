@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Kloc.Common.Domain.Abstractions
 {
@@ -14,7 +15,7 @@ namespace Kloc.Common.Domain.Abstractions
         /// </summary>
         /// <param name="id">The primary key of the entity.</param>
         /// <returns>The entity.</returns>
-        TAggregateRoot GetById(Guid id);
+        Task<TAggregateRoot> GetByIdAsync(Guid id);
         /// <summary>
         /// Adds an aggregate root to the repository.
         /// </summary>

@@ -1,4 +1,6 @@
-﻿namespace Kloc.Common.Domain.Abstractions
+﻿using System.Threading.Tasks;
+
+namespace Kloc.Common.Domain.Abstractions
 {
     /// <summary>
     /// Interface that defines a repository that is read-only.
@@ -12,6 +14,6 @@
         /// </summary>
         /// <param name="id">The primary key or composite key of the entity.</param>
         /// <returns>The entity.</returns>
-        TEntity GetById(params object[] id);
+        Task<TEntity> GetByIdAsync(params object[] id);
     }
 }

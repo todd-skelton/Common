@@ -1,4 +1,6 @@
-﻿namespace Kloc.Common.Domain.Abstractions
+﻿using System.Threading.Tasks;
+
+namespace Kloc.Common.Domain.Abstractions
 {
     /// <summary>
     /// Interface used to implement the unit of work pattern
@@ -8,6 +10,6 @@
         /// <summary>
         /// Persists changes made in the domain.
         /// </summary>
-        void Commit();
+        Task CommitAsync();
     }
 }
