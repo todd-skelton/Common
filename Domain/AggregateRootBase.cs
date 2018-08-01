@@ -28,7 +28,7 @@ namespace Kloc.Common.Domain
         public Guid Id { get; private set; }
 
         /// <summary>
-        /// A <see cref="IReadOnlyCollection{T}"/> of <see cref="IDomainEvent"/> that are dispatched on a <see cref="IUnitOfWork.Commit"/>.
+        /// A <see cref="IReadOnlyCollection{T}"/> of <see cref="IDomainEvent"/> that are dispatched on a <see cref="IUnitOfWork.CommitAsync"/>.
         /// </summary>
         public IReadOnlyCollection<IDomainEvent> DomainEvents => domainEvents;
 
