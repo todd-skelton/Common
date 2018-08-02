@@ -40,6 +40,9 @@ namespace Data.EntityFrameworkCore
         /// Gets the <see cref="DbSet{TEntity}"/> as an <see cref="IQueryable{T}"/>.
         /// </summary>
         /// <returns>The <see cref="IQueryable{T}"/>.</returns>
-        public abstract IQueryable<TEntity> Query();
+        public IQueryable<TEntity> Query()
+        {
+            return _dbSet.AsQueryable();
+        }
     }
 }

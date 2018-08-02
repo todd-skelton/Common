@@ -14,4 +14,10 @@
     <ProjectReference Include="..\Domain.Abstractions\Domain.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="PersistentClasses1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

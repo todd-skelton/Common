@@ -1,19 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Excepting.Abstractions
+﻿namespace Excepting.Abstractions
 {
     /// <summary>
-    /// 
+    /// An interface used to create a handler for exceptions that can be injected into services.
     /// </summary>
-    public interface IExceptionHandler
+    /// <remarks>
+    /// Use this interface over <see cref="IExceptionHandler"/> when registering with dependency injection.
+    /// </remarks>
+    /// <typeparam name="T">The type of service the handler is being used in.</typeparam>
+    public interface IExceptionHandler<T> : IExceptionHandler
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="exception"></param>
-        /// <param name="args"></param>
-        /// <returns></returns>
-        Task HandleAsync(Exception exception, params object[] args);
+
     }
 }

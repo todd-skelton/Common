@@ -1,0 +1,1 @@
+﻿# `Kloc.Common.Data.EntityFrameworkCore`
