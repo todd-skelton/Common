@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Kloc.Common.Domain.Abstractions
+namespace Kloc.Common.Domain
 {
     /// <summary>
     /// Standard repository interface with crud operations.

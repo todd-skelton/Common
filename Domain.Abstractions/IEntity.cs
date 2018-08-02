@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Kloc.Common.Domain.Abstractions
+﻿namespace Kloc.Common.Domain
 {
     /// <summary>
     /// An object that is not defined by its attributes, but rather by a thread of continuity and its identity.

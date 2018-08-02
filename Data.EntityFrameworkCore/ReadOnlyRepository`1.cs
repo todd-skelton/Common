@@ -1,4 +1,4 @@
-﻿using Kloc.Common.Domain.Abstractions;
+﻿using Kloc.Common.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;

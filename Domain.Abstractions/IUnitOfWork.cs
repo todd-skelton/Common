@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Kloc.Common.Domain.Abstractions
+namespace Kloc.Common.Domain
 {
     /// <summary>
     /// Interface used to implement the unit of work pattern

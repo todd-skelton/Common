@@ -1,5 +1,4 @@
-﻿using Kloc.Common.Domain.Abstractions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Kloc.Common.Domain
 {

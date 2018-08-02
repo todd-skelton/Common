@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Kloc.Common.Domain.Abstractions
+namespace Kloc.Common.Domain
 {
     /// <summary>
     /// Interface that defines a repository that is read-only.

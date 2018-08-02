@@ -1,4 +1,4 @@
-﻿namespace Excepting.Abstractions
+﻿namespace Excepting
 {
     /// <summary>
     /// An interface used to create a handler for exceptions that can be injected into services.

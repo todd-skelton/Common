@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Kloc.Common.Domain.Abstractions
+namespace Kloc.Common.Domain
 {
     /// <summary>
     /// Interface to define a domain event handler to handle events (<see cref="IDomainEvent"/>).

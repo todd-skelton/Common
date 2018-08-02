@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kloc.Common.Domain.Abstractions
+namespace Kloc.Common.Domain
 {
     /// <summary>
     /// A collection of objects are bound together by a root entity, otherwise known as an aggregate root. The aggregate root guarantees the consistency of changes being made within the aggregate by forbidding external objects from holding references to its members.

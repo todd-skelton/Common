@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Kloc.Common.Excepting.Abstractions</AssemblyName>
-    <RootNamespace>Kloc.Common.Excepting.Abstractions</RootNamespace>
+    <RootNamespace>Kloc.Common.Excepting</RootNamespace>
   </PropertyGroup>
 
 </Project>

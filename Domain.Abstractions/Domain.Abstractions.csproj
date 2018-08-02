@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Kloc.Common.Domain.Abstractions</AssemblyName>
-    <RootNamespace>Kloc.Common.Domain.Abstractions</RootNamespace>
+    <RootNamespace>Kloc.Common.Domain</RootNamespace>
+    <PackageId>Kloc.Common.Domain.Abstractions</PackageId>
   </PropertyGroup>
 
 </Project>

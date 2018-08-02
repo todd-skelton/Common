@@ -1,5 +1,4 @@
-﻿using Excepting.Abstractions;
-using Kloc.Common.Domain.Abstractions;
+﻿using Excepting;
 using Kloc.Common.Excepting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
