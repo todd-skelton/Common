@@ -1,5 +1,4 @@
-﻿using Excepting;
-using Kloc.Common.Excepting;
+﻿using Kloc.Common.Excepting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
@@ -25,6 +24,7 @@ namespace Kloc.Common.Domain
 
             _serviceProvider = serviceProvider;
             _exceptionHandler = exceptionHandler;
+            _exceptionHandler = _exceptionHandler ?? new DefaultExceptionHandler();
         }
 
         /// <summary>

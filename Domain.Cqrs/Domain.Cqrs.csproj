@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain.Cqrs.Abstractions\Domain.Cqrs.Abstractions.csproj" />
+    <ProjectReference Include="..\Excepting.Abstractions\Excepting.Abstractions.csproj" />
+    <ProjectReference Include="..\Excepting\Excepting.csproj" />
   </ItemGroup>
 
 </Project>
