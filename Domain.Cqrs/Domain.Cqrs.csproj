@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Kloc.Common.Domain.Cqrs</AssemblyName>
+    <RootNamespace>Kloc.Common.Domain.Cqrs</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Cqrs.Abstractions\Domain.Cqrs.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
