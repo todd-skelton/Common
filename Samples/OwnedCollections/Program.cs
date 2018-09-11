@@ -85,7 +85,7 @@ namespace OwnedCollections
         public void Configure(EntityTypeBuilder<Parent> builder)
         {
             builder.HasKey(e => e.Id);
-            builder.OwnsMany(e => e.Children, sa=> { sa.Property(e=>e. });
+            builder.OwnsMany(e => e.Children);
         }
     }
 

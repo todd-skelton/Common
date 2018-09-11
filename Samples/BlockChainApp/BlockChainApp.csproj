@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Blockchaining\Blockchaining.csproj" />
+    <ProjectReference Include="..\..\Blockchaining\Blockchaining.csproj" />
   </ItemGroup>
 
 </Project>
