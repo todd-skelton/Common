@@ -23,13 +23,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.InMemory", "Data.InMemory\Data.InMemory.csproj", "{9BBE30CA-AA1E-4739-97D8-7A3B744DE020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.InMemory", "Data.InMemory\Data.InMemory.csproj", "{9BBE30CA-AA1E-4739-97D8-7A3B744DE020}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Cqrs", "Domain.Cqrs\Domain.Cqrs.csproj", "{64A7A095-6693-4091-8AAB-D147C7FA56F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Cqrs", "Domain.Cqrs\Domain.Cqrs.csproj", "{64A7A095-6693-4091-8AAB-D147C7FA56F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Cqrs.Abstractions", "Domain.Cqrs.Abstractions\Domain.Cqrs.Abstractions.csproj", "{C9E5047D-3D8B-4182-AA4E-D8A2FDF5E181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Cqrs.Abstractions", "Domain.Cqrs.Abstractions\Domain.Cqrs.Abstractions.csproj", "{C9E5047D-3D8B-4182-AA4E-D8A2FDF5E181}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{D96A05E0-254F-442F-BB27-93AF6D2E6FC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blockchaining", "Blockchaining\Blockchaining.csproj", "{A583636E-9ECB-4B16-B065-E5036A69B2E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockChainApp", "BlockChainApp\BlockChainApp.csproj", "{AF1CCF50-462A-46AD-996A-1160A9107465}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnedCollections", "OwnedCollections\OwnedCollections.csproj", "{6BA45BB2-5693-42BD-897D-297BDDADD396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instagram.Service", "Instagram.Service\Instagram.Service.csproj", "{3CB104CA-6B1D-4ACC-BD1C-29AC7F797824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,9 +77,29 @@ Global
 		{C9E5047D-3D8B-4182-AA4E-D8A2FDF5E181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E5047D-3D8B-4182-AA4E-D8A2FDF5E181}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E5047D-3D8B-4182-AA4E-D8A2FDF5E181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A583636E-9ECB-4B16-B065-E5036A69B2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A583636E-9ECB-4B16-B065-E5036A69B2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A583636E-9ECB-4B16-B065-E5036A69B2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A583636E-9ECB-4B16-B065-E5036A69B2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1CCF50-462A-46AD-996A-1160A9107465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1CCF50-462A-46AD-996A-1160A9107465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1CCF50-462A-46AD-996A-1160A9107465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1CCF50-462A-46AD-996A-1160A9107465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA45BB2-5693-42BD-897D-297BDDADD396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA45BB2-5693-42BD-897D-297BDDADD396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA45BB2-5693-42BD-897D-297BDDADD396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA45BB2-5693-42BD-897D-297BDDADD396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB104CA-6B1D-4ACC-BD1C-29AC7F797824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB104CA-6B1D-4ACC-BD1C-29AC7F797824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB104CA-6B1D-4ACC-BD1C-29AC7F797824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB104CA-6B1D-4ACC-BD1C-29AC7F797824}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF1CCF50-462A-46AD-996A-1160A9107465} = {D96A05E0-254F-442F-BB27-93AF6D2E6FC6}
+		{6BA45BB2-5693-42BD-897D-297BDDADD396} = {D96A05E0-254F-442F-BB27-93AF6D2E6FC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8748B962-28A2-4226-9752-1FCB5F4D2104}
