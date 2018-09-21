@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace Data.EntityFrameworkCore
+namespace Kloc.Common.Data.EntityFrameworkCore
 {
     /// <summary>
     /// Repository that can only be queried and typically gets mapped to a view.
     /// </summary>
     /// <typeparam name="TEntity">The type being represented in the database.</typeparam>
-    public abstract class QueryOnlyRepository<TEntity> : IQueryOnlyRepository<TEntity> 
+    public abstract class QueryOnlyRepositoryBase<TEntity> : IQueryOnlyRepository<TEntity> 
         where TEntity : class, IEntity
     {
         /// <summary>
@@ -17,10 +17,10 @@ namespace Data.EntityFrameworkCore
         protected readonly DbQuery<TEntity> _dbQuery;
 
         /// <summary>
-        /// Constucts a new <see cref="QueryOnlyRepository{T}"/> from a <see cref="DbQuery{TQuery}"/>
+        /// Constucts a new <see cref="QueryOnlyRepositoryBase{T}"/> from a <see cref="DbQuery{TQuery}"/>
         /// </summary>
         /// <param name="dbQuery"></param>
-        public QueryOnlyRepository(DbQuery<TEntity> dbQuery)
+        public QueryOnlyRepositoryBase(DbQuery<TEntity> dbQuery)
         {
             _dbQuery = dbQuery;
         }

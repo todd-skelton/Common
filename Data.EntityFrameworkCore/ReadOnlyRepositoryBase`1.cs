@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Data.EntityFrameworkCore
+namespace Kloc.Common.Data.EntityFrameworkCore
 {
     /// <summary>
     /// Repository that is read-only and doesn't have a primary key.
     /// </summary>
     /// <typeparam name="TEntity">The type being represented in the database.</typeparam>
-    public abstract class ReadOnlyRepository<TEntity> : IReadOnlyRepository<TEntity> 
+    public abstract class ReadOnlyRepositoryBase<TEntity> : IReadOnlyRepository<TEntity> 
         where TEntity : class, IEntity
     {
         /// <summary>
@@ -18,10 +18,10 @@ namespace Data.EntityFrameworkCore
         protected readonly DbSet<TEntity> _dbSet;
 
         /// <summary>
-        /// Constructs a new <see cref="ReadOnlyRepository{T}"/> from the <see cref="DbSet{TEntity}"/>.
+        /// Constructs a new <see cref="ReadOnlyRepositoryBase{T}"/> from the <see cref="DbSet{TEntity}"/>.
         /// </summary>
         /// <param name="dbSet">The <see cref="DbSet{TEntity}"/>.</param>
-        public ReadOnlyRepository(DbSet<TEntity> dbSet)
+        public ReadOnlyRepositoryBase(DbSet<TEntity> dbSet)
         {
             _dbSet = dbSet;
         }

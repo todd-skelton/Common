@@ -16,7 +16,7 @@ namespace Kloc.Common.Domain.Cqrs
             _exceptionHandler = _exceptionHandler ?? new DefaultExceptionHandler();
         }
 
-        public async Task Send<TCommand>(TCommand command) where TCommand : ICommand
+        public async Task SendAsync<TCommand>(TCommand command) where TCommand : ICommand
         {
             var handler = (ICommandHandler<TCommand>)_serviceProvider.GetService(typeof(ICommandHandler<TCommand>)) ?? 
                 throw new ArgumentException($"{typeof(TCommand).FullName} does not have a valid handler of type {typeof(ICommandHandler<TCommand>).FullName} registered.");

@@ -1,29 +1,28 @@
 ﻿using Kloc.Common.Domain;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Threading.Tasks;
 
-namespace Data.EntityFrameworkCore
+namespace Kloc.Common.Data.EntityFrameworkCore
 {
     /// <summary>
     /// Standard repository implementation.
     /// </summary>
     /// <typeparam name="TAggregateRoot">The <see cref="IAggregateRoot"/> represented in the database.</typeparam>
-    public abstract class Repository<TAggregateRoot> : ReadOnlyRepository<TAggregateRoot>, IRepository<TAggregateRoot>
-        where TAggregateRoot : class, IAggregateRoot
+    public abstract class RepositoryBase<TAggregateRoot, TKey> : ReadOnlyRepositoryBase<TAggregateRoot>, IRepository<TAggregateRoot, TKey>
+        where TAggregateRoot : class, IAggregateRoot<TKey>
     {
         /// <summary>
-        /// Constucts a <see cref="Repository{T}"/> from a <see cref="DbSet{TEntity}"/>.
+        /// Constucts a <see cref="RepositoryBase{T}"/> from a <see cref="DbSet{TEntity}"/>.
         /// </summary>
         /// <param name="dbSet">The <see cref="DbSet{TEntity}"/>.</param>
-        public Repository(DbSet<TAggregateRoot> dbSet) : base(dbSet) { }
+        public RepositoryBase(DbSet<TAggregateRoot> dbSet) : base(dbSet) { }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<TAggregateRoot> GetByIdAsync(Guid id)
+        public Task<TAggregateRoot> GetByIdAsync(TKey id)
         {
             return _dbSet.FindAsync(id);
         }

@@ -1,28 +1,29 @@
 ﻿using Kloc.Common.Domain;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Data.EntityFrameworkCore
+namespace Kloc.Common.Data.EntityFrameworkCore
 {
     /// <summary>
     /// Base class for unit of work pattern using ef core. Domain events are dispatched on <see cref="CommitAsync"/>.
     /// </summary>
-    public abstract class UnitOfWork : IUnitOfWork
+    public abstract class UnitOfWorkBase : IUnitOfWork
     {
-        private readonly DbContext _dbContext;
+        private readonly DbContext _context;
         private readonly IDomainEventDispatcher _dispatcher;
 
         /// <summary>
-        /// Constucts a <see cref="UnitOfWork"/> used to commit changes to a database.
+        /// Constucts a <see cref="UnitOfWorkBase"/> used to commit changes to a database.
         /// </summary>
-        /// <param name="dbContext">The <see cref="DbContext"/> for the database.</param>
+        /// <param name="context">The <see cref="DbContext"/> for the database.</param>
         /// <param name="dispatcher">The <see cref="IDomainEventDispatcher"/> to dispatch any events.</param>
-        protected UnitOfWork(DbContext dbContext, IDomainEventDispatcher dispatcher)
+        protected UnitOfWorkBase(DbContext context, IDomainEventDispatcher dispatcher)
         {
-            _dbContext = dbContext;
-            _dispatcher = dispatcher;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+            _dispatcher = dispatcher ?? throw new ArgumentNullException(nameof(dispatcher));
         }
 
         /// <summary>
@@ -31,7 +32,7 @@ namespace Data.EntityFrameworkCore
         public virtual async Task CommitAsync()
         {
             // find and raise all domain events on entities
-            var entries = _dbContext.ChangeTracker.Entries<IAggregateRoot>().Where(e => e.Entity.DomainEvents.Any());
+            var entries = _context.ChangeTracker.Entries<IAggregateRoot>().Where(e => e.Entity.DomainEvents.Any());
 
             var aggregateRoots = entries.Select(e => e.Entity);
 
@@ -43,7 +44,7 @@ namespace Data.EntityFrameworkCore
             }
 
             // save changes to the database
-            await _dbContext.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             if (events.Any())
             {

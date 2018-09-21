@@ -14,11 +14,19 @@ namespace Kloc.Common.Data.InMemory
             _dispatcher = dispatcher;
         }
 
-        public abstract IEnumerable<IDomainEvent> GetDomainEvents();
+        public abstract IEnumerable<IAggregateRoot> GetEntities();
 
         public virtual async Task CommitAsync()
         {
-            foreach(var @event in GetDomainEvents())
+            var events = new List<IDomainEvent>();
+
+            foreach(var entity in GetEntities().Where(e => e.DomainEvents.Any()))
+            {
+                events.AddRange(entity.DomainEvents);
+                entity.ClearEvents();
+            }
+
+            foreach (var @event in events)
             {
                 await _dispatcher.RaiseAsync(@event);
             }
